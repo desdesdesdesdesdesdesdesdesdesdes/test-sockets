@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+command_to_run="$@"
+
+# Run commands inside the container
+docker exec -u www-data test-app.php sh -c "$command_to_run"
